@@ -36,6 +36,7 @@ function App() {
     const [refresh, setRefresh] = useState(0);
     const [usersData, setUserData] = useState([]); 
     const maxID= useRef(0);
+    const [isLoading, setIsLoading] = useState(false);
     const fieldsRefs = {};
     for (let i = 0; i < FIELDS.length; i++){
         fieldsRefs[FIELDS[i].codeName] = {
@@ -54,16 +55,19 @@ function App() {
     
     async function userGet() {
         try {
+            setIsLoading(true);
             fetch(endPoint)
             .then((data) => data.json())
             .then((data) => {
                 console.log(`After getting the data from GET = ${JSON.stringify(data)}`);
                 maxID.current = 0;
                 data.forEach((ele) => {maxID.current = Math.max(maxID.current, ele.id)})
+                setIsLoading(false);
                 setUserData(data);
             })
         } catch (error) {
             console.log("Some error occur while fetching users" + error.message);
+            setIsLoading(false);
         }
         
     }
@@ -143,6 +147,7 @@ function App() {
             setMode={setMode} 
             fieldsRefs={fieldsRefs}
             fieldToRender={fieldToRender}
+            isLoading={isLoading}
         />
     </div>
     );

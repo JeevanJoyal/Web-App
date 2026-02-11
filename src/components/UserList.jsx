@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect } from "react"
 
-export default function UserList({refresh, setRefresh, usersData, userGet, userDelete, setMode, fieldsRefs, fieldToRender}) {    
+export default function UserList({refresh, setRefresh, usersData, userGet, userDelete, setMode, fieldsRefs, fieldToRender, isLoading}) {    
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {userGet();},[]);
 
@@ -74,5 +74,5 @@ export default function UserList({refresh, setRefresh, usersData, userGet, userD
         </table>
     )}
 
-    return <div>No Data</div>
+    return <div>{isLoading ? "......Loading" : "No Data to Show"}</div>
 }
