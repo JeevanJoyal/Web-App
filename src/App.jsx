@@ -1,6 +1,8 @@
 import { useState,useRef } from "react";
 import Form from "./components/Form";
 import UserList from "./components/UserList";
+
+const endPoint = "https://web-app-mock-api.onrender.com/users";
 const FIELDS = [
     {
         codeName : "id" ,
@@ -52,7 +54,7 @@ function App() {
     
     async function userGet() {
         try {
-            fetch("http://localhost:3001/users")
+            fetch(endPoint)
             .then((data) => data.json())
             .then((data) => {
                 console.log(`After getting the data from GET = ${JSON.stringify(data)}`);
@@ -67,7 +69,7 @@ function App() {
     }
     async function userPost(formData) {
         try {
-            fetch("http://localhost:3001/users", {
+            fetch(endPoint, {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json"
@@ -88,7 +90,7 @@ function App() {
 
     async function userPut(id, formData) {
         try {
-            fetch(`http://localhost:3001/users/${id}`, {
+            fetch(endPoint + `/${id}`, {
                 method: "PUT",
                 headers: {
                 "Content-Type": "application/json"
@@ -109,7 +111,7 @@ function App() {
     
     async function userDelete(id) {
         try {
-            fetch(`http://localhost:3001/users/${id}`, {
+            fetch(endPoint + `/${id}`, {
                 method : "DELETE"
             }).then((res) => {
                 console.log(res);

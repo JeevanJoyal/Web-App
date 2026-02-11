@@ -1,56 +1,11 @@
 {
   "users": [
     {
-      "id": "3",
-      "fname": "Chode",
-      "lname": "Madhuri",
-      "phoneNumber": "0987654321",
-      "email": "MadhuriChode124@banana.com",
-      "address": "New york, US"
-    },
-    {
-      "id": "4",
-      "fname": "KatteBabu",
-      "lname": "Jeevan Joyal",
-      "phoneNumber": "0987654321",
-      "email": "aksdj@jjson.com"
-    },
-    {
-      "id": "5",
-      "fname": "Bananan",
-      "lname": "aidjij",
+      "id": "1",
+      "fname": "Dummy",
+      "lname": "ForTest",
       "phoneNumber": "1234567890",
-      "email": "Bananaan@skdjnf.jjj"
-    },
-    {
-      "id": "6",
-      "fname": "Kattevarapu",
-      "lname": "Jeevan",
-      "phoneNumber": "9059045902",
-      "email": "jeevanjoyal77@gmail.com"
-    },
-    {
-      "id": "7",
-      "fname": "K",
-      "lname": "Jeevan",
-      "phoneNumber": "9999999999",
-      "email": "jeevanjoyal99@gmail.com"
-    },
-    {
-      "id": "8",
-      "fname": "Franklin",
-      "lname": "Kattevarapu",
-      "phoneNumber": "1245678901",
-      "email": "kfranklin@gmail.com",
-      "address": "1234567kmsd;aldkasl"
-    },
-    {
-      "id": "9",
-      "fname": "Ram Raju",
-      "lname": "panumathsa",
-      "phoneNumber": "8720931234",
-      "email": "Rambabu69@gmail.com",
-      "address": "alkjdsaiudkjadkasjndsoijdksahouifjkasdsajdkasbd"
+      "email": "Dummy@test.com"
     }
   ]
 }
