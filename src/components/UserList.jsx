@@ -2,6 +2,7 @@
 import { useEffect } from "react"
 
 export default function UserList({refresh, setRefresh, usersData, userGet, userDelete, setMode, fieldsRefs, fieldToRender}) {    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {userGet();},[]);
 
     function handleEdit(user) {
